@@ -1,12 +1,10 @@
 using System.ComponentModel.DataAnnotations;
-namespace DemoMvc.Models.Entities
-{
 
-    public class P
+namespace DemoMVC.Models.Entities
+{
+    public class Employee: Person
     {
-    [Key]
-    public string PersonID { get; set; }
-    public string HoTen { get; set; }
-    public string QueQuan { get; set; }
-    }
+    public string EmployeeID { get; set; }
+    public string Company { get; set; }
+}
 }

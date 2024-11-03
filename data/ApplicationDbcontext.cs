@@ -1,14 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using DemoMvc.Models;
-using Microsoft.AspNetCore.SignalR;
+using DemoMVC.Models.Entities;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 
-namespace DemoMvc.Data
+namespace DemoMVC.Data
 {
-    public class ApplicationDbcontext : DbContext
+    public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbcontext(DbContextOptions<ApplicationDbcontext> options) : base(options)
+        public ApplicationDbContext (DbContextOptions<ApplicationDbContext> options) : base(options)
         {}
-        public DbSet<Person> Person {get; set; } 
-        
+
+        public DbSet<Student> Student { get; set; } = default!;
+        public DbSet<Person> people { get; set; } = default!;
+
+        public DbSet<Employee> Employee { get; set; } = default!;
+      
+
     }
 }
